@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-3 mx-4">
+    <h1 class="text-3xl font-bold">{{title}}</h1>
+    <h3 class="text-bold text-xl" [ngClass]="number % 2 === 0 ? 'text-red-600': 'text-blue-600'">{{number}}</h3>
+    <h4>Timer: {{timer}} </h4>
+    <app-img [imgUrl]="imgUrl"></app-img>
+    <div class="w-100 flex justify-around gap-2 mx-2">
+        <app-button type="+" (dif)="onDif($event)" class="w-full bg-green-600 rounded-md">
+            <span>+</span>
+        </app-button>
+        <app-button type="-" (dif)="onDif($event)" class="w-full bg-red-600 rounded-md">
+            <span>-</span>
+        </app-button>
+    </div>
+    <button
+        routerLink="members"
+        class="w-full bg-sky-600 text-white  h-12 rounded-md">
+        Members
+    </button>
+</div>
